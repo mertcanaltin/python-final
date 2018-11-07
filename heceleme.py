@@ -8,16 +8,19 @@ kelime = "0100101010100100101010"
 
 hecelenmis = ""
 
-yeniliste = []
-
-for eleman in sablonlar:
+while(True):
+  yeniliste = []
+  for eleman in sablonlar:
     if eleman == kelime[len(hecelenmis):len(hecelenmis)+len(eleman)]:
         yeniliste.append(eleman)
         yeniliste.reverse()
-        for eleman2 in yeniliste:
-            if kelime[len(eleman2)] == '0':
-                hecelenmis+=eleman2
-
+for eleman2 in yeniliste:
+    if kelime[len(eleman2)] == '0':
+        hecelenmis+=eleman2+'-'
+        break
+   
+   print  len (hecelenmis),len(kelime):
+   break
 print hecelenmis
 
 
